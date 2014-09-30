@@ -139,7 +139,7 @@
             "font-family": "\"Amatic SC\", \"Lobster\", Verdana, sans-serif",
             "font-size": "90px",
             "font-weight": "700",
-            "line-height": "inherit",
+            "line-height": "80px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         }
