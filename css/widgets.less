@@ -1,0 +1,619 @@
+// -----------------------------
+// Widgets
+// -----------------------------
+
+
+.widget.image {
+	margin: 0 0 10px;
+
+	span.image-title,
+	span.image-description {
+		text-align: left;
+		margin: 5px 0;
+	}
+	span.image-title {
+		font-family: @font-swatch4-font-family;
+		font-size: @font-swatch4-font-size;
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		color: @font-swatch4-color;
+	}
+	span.image-description {
+		font-family: @font-swatch5-font-family;
+		font-size: 14px;
+		font-weight: @font-swatch5-font-weight;
+		line-height: 20px;
+		letter-spacing: @font-swatch5-letter-spacing;
+		color: @font-swatch5-color;
+	}
+}
+
+
+// -----------------------------
+// Company Name
+// -----------------------------
+
+
+.widget.companyname a {
+	font-family: @font-swatch8-font-family;
+}
+
+
+
+// -----------------------------
+// #Forms
+// -----------------------------
+
+
+input[type=text],
+input[type=email],
+.widget.profile form fieldset input,
+textarea,
+.widget.ecomcheckout .delivery select {
+	margin: 10px 0;
+	padding: 12px 16px;
+	background-color: @color-swatch1;
+	border: 3px dashed @color-swatch2;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	&:focus {
+		border-color: @color-swatch2;
+	}
+}
+
+.widget.ecomcheckout .delivery select {
+	height: 56px;
+	margin-bottom: 1em;
+	font-size: 12px;
+	background-position-x: 98%;
+	background-size: 20px;
+}
+
+
+// Contact, Signup, Profile, Delivery
+
+.contactform,
+.signupform,
+.canvas .widget.profile form,
+.bottom-profile .widget.profile form,
+.delivery {
+	padding: 30px 30px 50px;
+	margin: 0 0 20px;
+	@media @mobile {
+		border-left: 0;
+		border-right: 0;
+		padding: 20px 0px 40px;
+		margin: 30px 0;
+	}
+	fieldset {
+		margin: 0;
+		input {
+			width: 100%;
+			height: inherit;
+		}
+	}
+
+
+	// Label
+
+	label {
+		font-family: @font-swatch4-font-family;
+		font-size: @font-swatch4-font-size;
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		color: @font-swatch7-color;
+	}
+	input.email {
+		margin-bottom: 20px;
+	}
+}
+
+
+// Profile Form
+
+.widget.profile form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	fieldset input {
+		width: 60%;
+		height: 52px;
+		padding: 8px 12px;
+		margin-right: 15px;
+		font-size: 15px;
+		text-indent: 0;
+		@media @mobile {
+			width: 100%;
+		}
+	}
+}
+
+// -----------------------------
+// #Buttons
+// -----------------------------
+
+
+// Overrides
+
+.widget.button button {
+	margin: 10px 0;
+}
+
+
+// General
+
+.widget.button button,
+button.btn,
+.widget.profile form button,
+.signupform fieldset button,
+.contactform button.btn,
+.btn,
+.blogsearch form button,
+.blog-search-submit button,
+.checkout-order-button,
+.checkout-empty-link,
+.blog-post-more-link a,
+.ecombasket-checkout-link,
+.widget.ecomcheckout .checkout-order-button,
+.blog-list-footer a {
+	padding: 0 45px;
+	border: 3px dashed @color-swatch3;
+	background-color: transparent;
+
+
+	// Transition
+
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+
+
+	// Font
+
+	color: @font-swatch7-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	font-weight: @font-swatch7-font-weight;
+
+
+	// Button Hover
+
+	&:hover {
+		background-color: @color-swatch3;
+		color: @color-swatch1;
+		text-decoration: none;
+	}
+
+	&:focus {
+		-webkit-transform: translate(0, 3px);
+		-ms-transform: translate(0, 3px);
+		transform: translate(0, 3px);
+		outline: none;
+	}
+
+}
+
+
+// Feature
+
+.widget.feature button {
+	padding: 0px 25px !important;
+	border: 2px dashed @color-swatch1 !important;
+	color: @color-swatch1;
+
+	background-color: transparent;
+
+	background-size: 18px;
+	border-radius: 0;
+
+	// Font
+	&:hover {
+
+		background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1),
+		lightness(@color-swatch1), 0.3);
+
+		color: @color-swatch1;
+		text-decoration: none;
+	}
+}
+
+
+// PayPal, Dropbox, Tweet
+
+// Image buttons
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button,
+.widget.clicktocall a {
+	padding-left: 45px;
+	background-position: 14px center;
+	background-color: @color-swatch2;
+	color: @color-swatch1;
+	&:hover {
+		padding-left: 45px;
+		background-position: 14px center;
+		background-color: darken(@color-swatch2,10%);
+	}
+}
+
+
+// Overrides
+
+.widget.clicktocall a {
+	@media @mobile {
+		background-color: @color-swatch3;
+	}
+}
+
+
+
+
+// Twitter Feed
+
+.widget.twitter {
+	margin: 20px 0;
+	img {
+		border-radius: 50%;
+	}
+	p {
+		color: @color-swatch4;
+		padding: 0;
+
+		@media @mobile {
+			line-height: @font-swatch2-line-height;
+		}
+	}
+	li {
+		list-style: none;
+		padding-bottom: 0px;
+		margin: 1.5em 10px;
+		background: lighten(@color-swatch7, 5%);
+  		border-left: 5px solid @color-swatch2;
+  		margin: 1.5em 0px;
+  		padding: 11px 10px 20px 20px;
+	}
+	ul li {
+		padding: 28px 0px 20px 20px;
+	}
+	ul li a:hover {
+		text-decoration: none;
+	}
+	li:last-child {
+		padding-bottom: 20px;
+	}
+	// Tweet Content
+	.twitter-profile-pic {
+		@media @tablet {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	.twitter-content {
+		float: left;
+		.bk-full-name,
+		a, p a, span, a .bk-full-name {
+			color: @font-swatch4-color;
+			font-family: @font-swatch4-font-family;
+			font-size: @font-swatch4-font-size;
+			font-weight: 400;
+			line-height: @font-swatch4-line-height;
+			letter-spacing: @font-swatch4-letter-spacing;
+		}
+		.bk-full-name {
+			display: inline-block;
+			margin-bottom: 4px;
+		}
+		// Tweet Link
+		p a, a:hover span.bk-full-name {
+			color: @color-swatch3;
+			text-decoration: none;
+		}
+		span a {
+			text-decoration: none;
+			&:hover {
+				color: @color-swatch3;
+				text-decoration: none;
+			}
+		}
+		// Extra Info
+		time {
+			display: none;
+		}
+		span {
+			font-weight: inherit;
+		}
+		span, span a {
+			font-size: 13px;
+		}
+	}
+}
+
+
+
+
+
+// -----------------------------
+// #Line
+// -----------------------------
+
+.widget.line {
+	padding: 0;
+	hr {
+		margin: 50px 0;
+		&.line {
+			height: 3px;
+			background-color: transparent;
+			border-bottom: 3px dashed @color-swatch2;
+		}
+	}
+}
+
+
+
+
+
+// -----------------------------
+// Social Icons
+// -----------------------------
+
+
+// Zone
+
+.widget.socialicons {
+	.clearfix;
+	span {
+		&:first-child {
+			a {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+		&:last-child {
+			a {
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+}
+
+.widget.socialicons span a {
+	background-color: @color-swatch3;
+	text-indent: 9999px;
+	overflow: hidden;
+	&:hover{
+		background-color: darken(@color-swatch2,10%);
+	}
+}
+
+.widget.profile .bk-profile-socialicons span a,
+footer .widget.profile .bk-profile-socialicons span a {
+	background-color: @color-swatch3;
+	text-indent: 9999px;
+	overflow: hidden;
+	&:hover{
+		background-color: darken(@color-swatch2,10%);
+	}
+}
+
+
+
+
+
+// -----------------------------
+// Slideshow
+// -----------------------------
+
+.widget.responsiveslideshow {
+	span.btn-play, span.btn-play.pause, &:hover span.btn-play, {
+		display: none;
+	}
+	// Main
+	.slideshow-widget {
+
+		.content-wrapper {
+			background-color: @color-swatch2;
+			opacity: 0.6;
+			padding: 20px;
+		}
+
+		span {
+			display: block;
+			text-align: center;
+		}
+		// Buttons
+		.btns-move {
+			.btn-prev {
+				left: 10px;
+				height: 40px;
+				width: 40px;
+				background: image('/images/img-arrow-left.svg') center no-repeat;
+				color: transparent;
+				background-color: @color-swatch2;
+			}
+			.btn-next {
+				right: 10px;
+				height: 40px;
+				width: 40px;
+				background: image('/images/img-arrow-right.svg') center no-repeat;
+				color: transparent;
+				background-color: @color-swatch2;
+			}
+			@media @mobile {
+				.btn-next,
+				.btn-prev {
+					width: 26px;
+					height: 26px;
+					background-size: 12px;
+					&:hover {
+						background-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	.slideshow-widget-controls {
+		margin-top: 0;
+		.dot {
+			width: 12px;
+			height: 12px;
+			background-color: transparent;
+			border: 1px solid;
+			border-radius: 10px;
+			border: 1px solid @color-swatch7;
+			&.selected {
+				background-color: transparent;
+				border: 1px solid @color-swatch3;
+			}
+			&:hover {
+				background-color: @color-swatch3;
+				border: 1px solid @color-swatch3;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+// Responsive
+.widget.responsiveslideshow .slideshow-image-list,
+.widget.responsiveslideshow .slideshow-widget {
+	@media @mobile {
+		height: 230px;
+		min-height: 250px;
+	}
+}
+
+
+
+
+
+
+// -----------------------------
+// Gallery
+// -----------------------------
+
+
+.widget.gallery {
+	margin: 20px 0 20px 0;
+	ul li {
+		@media @tablet {
+			width: 50%;
+			padding-bottom: 50%;
+		}
+		@media @mobile {
+			width: 100%;
+			padding-bottom: 100%;
+		}
+		span.inner {
+			left: 5px;
+			right: 5px;
+			bottom: 16px;
+			background-image: image('/images/gallery-background.png');
+			.title,
+			.description {
+				width: 80%;
+				padding: 10px;
+				margin: 0 auto;
+
+				// Font
+				color: @color-swatch1;
+				font-family: @font-swatch5-font-family;
+				letter-spacing: @font-swatch4-letter-spacing;
+				text-align: center;
+			}
+			.title {
+				font-size: 22px;
+				font-weight: 600;
+				line-height: 28px;
+			}
+			.description {
+				font-size: 18px;
+				line-height: 24px;
+				margin-top: 12px;
+			}
+		}
+	}
+
+
+	// Image Data
+
+	.image-data {
+		display: block;
+		padding: 30px 20px 0 20px;
+		background-color: transparent;
+		-webkit-transition: all 0.6s ease-out;
+		-moz-transition: all 0.6s ease-out;
+		-o-transition: all 0.6s ease-out;
+		transition: all 0.6s ease-out;
+		&:hover {
+			background-color: @color-swatch3;
+		}
+
+		span.title {
+			line-height: 1.5;
+			-webkit-transform: translate3d(0,100%,0);
+			transform: translate3d(0,100%,0);
+			opacity: 0;
+			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			transition: opacity 0.35s, transform 0.35s;
+
+			&:after {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				margin: 2px auto 0;
+				width: 35%;
+				height: 3px;
+				background: #fff;
+				content: '';
+				-webkit-transform: translate3d(0,40px,0);
+				transform: translate3d(0,40px,0);
+				opacity: 0;
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+			}
+
+		}
+
+		span.description {
+			line-height: 1.5;
+			-webkit-transform: translate3d(0,100%,0);
+			transform: translate3d(0,100%,0);
+			opacity: 0;
+			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			transition: opacity 0.35s, transform 0.35s;
+		}
+
+		&:hover {
+			span.title {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+
+				&:after {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+				}
+
+			}
+
+			span.description {
+				opacity: 1;
+				-webkit-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+		}
+
+	}
+
+}

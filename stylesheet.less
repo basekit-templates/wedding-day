@@ -1,0 +1,467 @@
+/*	===============================
+	Colour Swatches
+	===============================
+	"color1": == Background
+	"color2": == Contrast colour
+	"color3": == Button colour
+	"color4": == Title colour
+	"color5": == Paragraph colour
+	"color6": == Nav text colour
+	"color7": == Header BG colour
+	=============================== */
+
+/*	===============================
+	Font Swatches
+	===============================
+	"font1":  == Heading 1
+	"font2":  == Heading 2
+	"font3":  == Heading 3
+	"font4":  == Heading 4
+	"font5":  == Paragraph
+	"font6":  == Navigation Text
+	"font7":  == Buttons
+	"font8":  == Feature Title
+	"font9":  == Feature Subtitle
+	"font10": == Logo
+	=============================== */
+
+
+
+
+// -----------------------------
+// #Imports
+// -----------------------------
+
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/ecommerce.less";
+@import "@{templateLocal}/css/widgets.less";
+@import "@{templateLocal}/css/menu.less";
+@import "@{templateLocal}/css/blog.less";
+
+
+
+
+
+// -----------------------------
+// #Page Settings
+// -----------------------------
+
+pre {
+white-space: normal;
+}
+
+// Wrapper
+
+.wrapper {
+	.clearfix;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+ul, li {
+	margin: 0;
+}
+
+
+
+
+
+// Blockquote
+
+blockquote {
+  border-left: 5px solid @color-swatch2;
+  margin: 1.5em 0px;
+  padding: 10px 10px 10px 50px;
+}
+
+
+blockquote:before {
+  color: @color-swatch5;
+  content: open-quote;
+  font-size: 4em;
+  padding: 1px 0 10px 10px;
+}
+
+
+blockquote p {
+  display: inline;
+}
+
+// Body
+
+body {
+	background-image: image('/images/template-bg.jpg');
+}
+
+
+
+
+
+// -----------------------------
+// #Header
+// -----------------------------
+
+
+.template-header {
+	.clearfix;
+	position: relative;
+	background-color: @color-swatch2;
+	padding: 90px 0px;
+	text-align: center;
+
+
+
+	// Header company name
+
+	.widget.companyname {
+		& a:after {
+		content: " ";
+		background-image: url(/index.php/template/wedding-day/images/wave-white.png);
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		width: 95px;
+		height: 16px;
+		left: 50%;
+		top: 180%;
+		position: absolute;
+		z-index: 9999;
+		transform: translate(-50%,-50%);
+
+			@media @tablet {
+				display: none;
+			}
+
+		}
+	}
+}
+
+
+
+
+// -----------------------------
+// #Feature Image
+// -----------------------------
+
+
+.widget.feature {
+	text-align: center;
+	margin-bottom: 60px;
+	border-bottom: 10px solid @color-swatch1;
+
+	// Padding for mobile around text
+
+	.feature-bgimg .content .spare {
+		padding: 20px;
+	}
+
+	// Tablet font sizes
+	h2 {
+		@media @tablet {
+		font-size: bkscale(@font-swatch8-font-size, 0.8);
+		line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+	}
+	h3 {
+		@media @tablet {
+		font-size: bkscale(@font-swatch9-font-size, 0.8);
+		}
+	}
+
+	// Mobile font sizes
+
+	h2 {
+		@media @mobile {
+		font-size: bkscale(@font-swatch8-font-size, 0.7);
+		line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+	}
+	h3 {
+		@media @mobile {
+		font-size: bkscale(@font-swatch9-font-size, 0.7);
+		}
+	}
+}
+
+
+
+// -----------------------------
+// Extended Navigation
+// -----------------------------
+
+
+// Nav clearfix
+
+.widget.extendednavigation{
+	.clearfix;
+
+	span:hover {
+		color: darken(@color-swatch3,20%);
+	}
+
+	ul li {
+		& span:hover {
+		color: darken(@color-swatch3,20%);
+		}
+	}
+}
+
+
+// General nav positioning
+
+.nav {
+	width: 100%;
+	padding: 10px 0px;
+	background-color: @color-swatch1;
+
+	@media @tablet {
+		padding: 30px 0px;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: @color-swatch1;
+		transform: rotate(45deg);
+		top: 255px;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		@media @tablet {
+			display: none;
+		}
+	}
+}
+
+
+.widget .extendednavigation a.pull {
+    display: none;
+    @media @tablet {
+        background-color: @color-swatch2;
+		border: 1px solid fade(@color-swatch1, 20%);
+		.border-radius(6px);
+		padding: 11px 9px 0;
+		position: absolute;
+		display: inline-block;
+		width: 42px;
+		height: 38px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+		.transition( all, 0.5s, ease);
+        &:hover {
+           cursor: pointer;
+           background-color: fade(@color-swatch6, 80%);
+			border: 1px solid fade(@color-swatch1, 30%);
+			.transition( all, 0.5s, ease);
+        }
+        &:after, &:before {
+            content: '';
+			position: absolute;
+			width: 22px;
+			height: 2px;
+			background: white;
+			box-shadow: 0 6px 0 white, 0 12px 0 white;
+			top: 11px;
+			right: 9px;
+        }
+        &:before {
+        }
+    }
+}
+
+
+// Trigger Icon: Cross
+.widget.extendednavigation {
+	ul.open + a.pull {
+		top: 0;
+		@media @tablet {
+    	 	// Cross lines
+    	 	background: @color-swatch2;
+    	 	&:after, &:before {
+    	 		  box-shadow: none;
+    	 		  margin: 5px 0 0 -13px;
+    	 	}
+    	 	// Cross Line 1
+    	 	&:after {
+	            -webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+    	 	}
+    	 	// Cross Line 2
+    	 	&:before {
+    	 		display: block;
+	            -webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+    	 	}
+    	}
+	}
+}
+
+
+
+
+
+
+// The rest of the nav styles
+
+.widget .extendednavigation ul,
+div.widget.extendednavigation ul {
+	@media @tablet {
+		margin: 20px 0 auto;
+		padding: 5px 0 0 0;
+	}
+
+
+	li {
+
+		@media @tablet {
+			padding: 0px;
+		}
+
+
+		// Nav Links
+
+		a {
+			color: @font-swatch6-color;
+			line-height: 40px;
+			&:hover {
+				color: darken(@font-swatch6-color,10%);
+			}
+
+			@media @tablet {
+				padding: 5px 20px;
+			}
+		}
+
+
+		// Dropdown Menu
+
+		&:hover ul {
+			margin: 0;
+			width: 100%;
+			min-width: 10px;
+			background-color: @color-swatch1;
+			background-image: none;
+		}
+
+		li {
+			@media @tablet {
+				background-color: darken(@color-swatch1,5%);
+			}
+		}
+
+		&.folder {
+			color: @font-swatch6-color;
+			&:hover {
+				color: darken(@font-swatch6-color,10%);
+  				background-color: @color-swatch1;
+  				@media @tablet {
+				background-color: darken(@color-swatch1,5%);
+				}
+			}
+
+			&:after {
+				border: 0;
+			}
+
+			span.text {
+				color: @font-swatch6-color;
+				line-height: 40px;
+				&:hover {
+					color: darken(@font-swatch6-color,10%);
+				}
+
+				@media @tablet {
+					padding: 5px 20px;
+				}
+			}
+
+			& > .text:after {
+				display: inline-block;
+                content: "";
+               	width: 0;
+               	height: 0;
+                border: 5px solid transparent;
+                border-top-color: @font-swatch6-color;
+                margin-left: 0.4em;
+                margin-bottom: -2px;
+			}
+
+				@media @tablet {
+					& > .text:before {
+					display: inline-block;
+	                content: "";
+	               	width: 0;
+	               	height: 0;
+	                border: 5px solid transparent;
+	                border-top-color: @font-swatch6-color;
+	                margin-right: 0.65em;
+	                margin-bottom: -1px;
+	            }
+
+	            	& > .text:after {
+	            		display: none;
+	            }
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+
+footer.template-footer {
+	padding: 4em 0 1.5em;
+	color: @font-swatch1-color;
+
+	.wrapper {
+		border-top: 3px dashed @color-swatch2;
+		padding: 4em 0 1.5em;
+	}
+
+	h1 {
+		color: @font-swatch1-color;
+		padding-bottom: 50px;
+		text-align: center;
+	}
+
+	p {
+		width: 70%;
+		margin: 0 auto;
+		padding-top: 30px;
+	}
+
+	.map {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.gm-style {
+		border: 7px solid @color-swatch1;
+	}
+}
+
+
+
+
+
