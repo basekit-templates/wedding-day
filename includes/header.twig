@@ -4,6 +4,7 @@
 	<div class="wrapper">
 
 		<div class="company-info">
+			{{widget('logo', 'companylogo', {"defaultlogo": asset('images/logo.png')})|raw}}
 			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 		</div>
 

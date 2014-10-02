@@ -89,6 +89,16 @@
 	}
 }
 
+a.menu-pull {
+	color: @color-swatch2 !important;
+	padding: 0!important;
+	border: 0!important;
+	background-color: transparent !important;
+	&:hover {
+		background-color: transparent !important;
+	}
+}
+
 
 // Promoted Item
 
@@ -136,6 +146,9 @@
 	letter-spacing: @font-swatch4-letter-spacing;
 
 	float: left;
+	@media @tablet {
+		float: none;
+	}
 }
 
 
@@ -144,6 +157,9 @@
 
 .menu-item-description {
 	margin-left: 90px;
+	@media @tablet {
+		margin-left: 0;
+	}
 }
 
 

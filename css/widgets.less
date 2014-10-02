@@ -108,6 +108,9 @@ textarea,
 	input.email {
 		margin-bottom: 20px;
 	}
+	textarea.message {
+		padding: 30px 0 30px 0;
+	}
 }
 
 
@@ -228,8 +231,7 @@ button.btn,
 // Image buttons
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
-.widget.dropbox button,
-.widget.clicktocall a {
+.widget.dropbox button {
 	padding-left: 45px;
 	background-position: 14px center;
 	background-color: @color-swatch2;
@@ -237,6 +239,20 @@ button.btn,
 	&:hover {
 		padding-left: 45px;
 		background-position: 14px center;
+		background-color: darken(@color-swatch2,10%);
+	}
+}
+
+.widget.tweet a {
+	padding: 20px 10px 20px 40px;
+	line-height: inherit;
+}
+
+.widget.clicktocall a {
+	padding: 20px;
+	background-color: @color-swatch2;
+	color: @color-swatch1;
+	&:hover {
 		background-color: darken(@color-swatch2,10%);
 	}
 }
@@ -254,70 +270,65 @@ button.btn,
 
 
 // Twitter Feed
-
 .widget.twitter {
 	margin: 20px 0;
-	img {
-		border-radius: 50%;
-	}
 	p {
 		color: @color-swatch4;
 		padding: 0;
-
-		@media @mobile {
-			line-height: @font-swatch2-line-height;
-		}
-	}
+	}	
 	li {
-		list-style: none;
-		padding-bottom: 0px;
-		margin: 1.5em 10px;
-		background: lighten(@color-swatch7, 5%);
-  		border-left: 5px solid @color-swatch2;
-  		margin: 1.5em 0px;
-  		padding: 11px 10px 20px 20px;
-	}
-	ul li {
-		padding: 28px 0px 20px 20px;
+		border-bottom: darken(@color-swatch1,10%);
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
 	ul li a:hover {
 		text-decoration: none;
 	}
-	li:last-child {
-		padding-bottom: 20px;
-	}
 	// Tweet Content
 	.twitter-profile-pic {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 12%;
+		margin-right: 2%;
 		@media @tablet {
 			width: 100%;
 			margin-right: 0;
 		}
 	}
 	.twitter-content {
-		float: left;
+		float: none;
+		display: inline-block;
+		width: 85%;
 		.bk-full-name,
-		a, p a, span, a .bk-full-name {
+		a, p a, span, a .bk-full-name, p:last-child {
+			display: inline-block;
 			color: @font-swatch4-color;
 			font-family: @font-swatch4-font-family;
 			font-size: @font-swatch4-font-size;
-			font-weight: 400;
+			font-weight: 600;
 			line-height: @font-swatch4-line-height;
 			letter-spacing: @font-swatch4-letter-spacing;
 		}
-		.bk-full-name {
-			display: inline-block;
-			margin-bottom: 4px;
-		}
 		// Tweet Link
 		p a, a:hover span.bk-full-name {
-			color: @color-swatch3;
+			font-family: @font-swatch5-font-family;
+			font-size: @font-swatch5-font-size;
+			color: @color-swatch2;
 			text-decoration: none;
 		}
 		span a {
 			text-decoration: none;
 			&:hover {
-				color: @color-swatch3;
+				color: @color-swatch2;
 				text-decoration: none;
+			}
+		}
+		p {
+			margin-top: 4px;
+			&:last-child {
+				font-weight: inherit;
 			}
 		}
 		// Extra Info
@@ -327,8 +338,20 @@ button.btn,
 		span {
 			font-weight: inherit;
 		}
-		span, span a {
+		span, span a, p:last-child {
 			font-size: 13px;
+		}
+	}
+}
+
+// Line
+.widget.line {
+	padding: 0;
+	hr {
+		margin: 50px 0;
+		&.line {
+			height: 1px;
+			background-color: darken(@color-swatch1,10%);
 		}
 	}
 }
@@ -419,7 +442,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 		.content-wrapper {
 			background-color: @color-swatch2;
-			opacity: 0.6;
+			opacity: 0.8;
 			padding: 20px;
 		}
 
