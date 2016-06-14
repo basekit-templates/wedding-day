@@ -1,6 +1,7 @@
 {
 	"name":"Wedding Day",
 	"thumbnail":"wedding-day.png",
+"screenshot":"wedding-day-screenshot.jpg",
     "tags": { "en": ["wedding", "event", "marriage", "wedding day"] },
     "pageTypes":["home"],
     "templateType":"standard",
