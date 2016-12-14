@@ -62,9 +62,10 @@ textarea,
 }
 
 
-// Contact, Signup, Profile, Delivery
+// Contact, Advanced Form, Signup, Profile, Delivery
 
 .contactform,
+.advancedcontactform,
 .signupform,
 .canvas .widget.profile form,
 .bottom-profile .widget.profile form,
@@ -104,6 +105,30 @@ textarea,
 	}
 }
 
+.advancedcontactform .option-list {
+	padding: 1em 0;
+}
+
+.advancedcontactform form select {
+	height: 35px;
+	margin: 20px 0;
+    padding: 8px 33px 8px 8px;
+    border: 1px solid @color-swatch2;
+    background-color: @color-swatch1;
+    color: @color-swatch5;
+    cursor: pointer;
+    &:focus {
+		outline: 0;
+    }
+	@media @mobile {
+		        width: 100%;
+    }
+}
+
+.advancedcontactform fieldset button {
+	margin-top: 20px;
+}
+
 
 // Profile Form
 
@@ -139,6 +164,7 @@ textarea,
 // General
 
 .widget.button button,
+.advancedcontactform fieldset button,
 button.btn,
 .widget.profile form button,
 .signupform fieldset button,
