@@ -1,5 +1,6 @@
 {
 	"name":"Wedding Day",
+	"versionTenCompatible": 1,
 	"thumbnail":"wedding-day.png",
 "screenshot":"wedding-day-screenshot.jpg",
     "tags": { "en": ["wedding", "event", "marriage", "wedding day"] },
